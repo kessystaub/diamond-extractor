@@ -7,7 +7,7 @@ RSpec.describe ExtractorController, type: :controller do
 
       expect(response).to have_http_status(:ok)
       json_response = JSON.parse(response.body)
-      expect(json_response['diamonds']).to eq(11)
+      expect(json_response['message']).to eq("Quantidade de diamantes extraídos: 11")
     end
 
     it 'returns zero diamonds for an expression with no diamonds' do
@@ -15,7 +15,7 @@ RSpec.describe ExtractorController, type: :controller do
 
       expect(response).to have_http_status(:ok)
       json_response = JSON.parse(response.body)
-      expect(json_response['diamonds']).to eq(0)
+      expect(json_response['message']).to eq("Quantidade de diamantes extraídos: 0")
     end
 
     it 'returns zero diamonds when the expression is empty' do
@@ -23,7 +23,7 @@ RSpec.describe ExtractorController, type: :controller do
 
       expect(response).to have_http_status(:ok)
       json_response = JSON.parse(response.body)
-      expect(json_response['diamonds']).to eq(0)
+      expect(json_response['message']).to eq("Quantidade de diamantes extraídos: 0")
     end
   end
 end

@@ -3,7 +3,7 @@ class ExtractorController < ApplicationController
     expression = params[:expression]
     diamonds_count = count_diamonds(expression)
 
-    render json: { diamonds: diamonds_count }
+    render json: { message: "Quantidade de diamantes extraídos: #{diamonds_count}" }
   end
 
   private
