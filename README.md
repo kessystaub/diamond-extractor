@@ -53,7 +53,9 @@ O servidor estará disponível em http://localhost:3000.
 ### Entrada:
 ```plaintext
 <<.<<..>><>><.>.>.<<.>.<.>>>><>><>>
+```
 
+### Saída:
+```plaintext
 Quantidade de diamantes extraídos: 11
-
 ```
