@@ -1,24 +1,51 @@
-# README
+# API de Extração de diamantes
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Esta API consiste em processar uma expressão com diamantes (`<>`) e areias (`.`). O objetivo é extrair todos os diamantes da expressão e contar quantos foram extraídos.
 
-Things you may want to cover:
+## Instalação e Execução
 
-* Ruby version
+### Passo 1: Clone o repositório
 
-* System dependencies
+Use o comando abaixo para clonar o repositório:
 
-* Configuration
+```bash
+git clone https://github.com/kessystaub/diamond-extractor.git
+```
 
-* Database creation
+### Passo 2: Instale as dependências
 
-* Database initialization
+Navegue até o diretório do projeto e execute o seguinte comando para instalar as dependências:
 
-* How to run the test suite
+```bash
+bundle install
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+### Passo 3: Configure o banco de dados
 
-* Deployment instructions
+Crie e migre o banco de dados com os comandos:
 
-* ...
+```bash
+rails db:create db:migrate
+```
+
+### Passo 4: Inicie o servidor
+
+Inicie o servidor Rails:
+
+```bash
+rails server
+```
+
+O servidor estará disponível em http://localhost:3000.
+
+## Endpoints
+
+### 1. Extrair diamantes
+
+- **Método**: POST  
+- **URL**: `http://localhost:3000/extract`  
+- **Descrição**: Extrai o número de diamantes de uma expressão. 
+- **Requisitos**:
+  - O `body` da requisição deve ser do tipo `multipart/form-data`.
+  - O parâmetro deve se chamar `expression` e conter a expressão com diamantes que deseja extrair.
+
