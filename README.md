@@ -48,3 +48,12 @@ O servidor estará disponível em http://localhost:3000.
 - **Requisitos**:
   - O parâmetro deve se chamar `expression` e conter a expressão com diamantes que deseja extrair.
 
+## Exemplo
+
+### Entrada:
+```plaintext
+<<.<<..>><>><.>.>.<<.>.<.>>>><>><>>
+
+Quantidade de diamantes extraídos: 11
+
+```
