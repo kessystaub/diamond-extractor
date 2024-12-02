@@ -46,6 +46,5 @@ O servidor estará disponível em http://localhost:3000.
 - **URL**: `http://localhost:3000/extract`  
 - **Descrição**: Extrai o número de diamantes de uma expressão. 
 - **Requisitos**:
-  - O `body` da requisição deve ser do tipo `multipart/form-data`.
   - O parâmetro deve se chamar `expression` e conter a expressão com diamantes que deseja extrair.
 
