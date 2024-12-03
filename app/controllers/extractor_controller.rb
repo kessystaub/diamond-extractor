@@ -1,7 +1,7 @@
 class ExtractorController < ApplicationController
   def extract
     expression = params[:expression]
-    diamonds_count = count_diamonds(expression)
+    diamonds_count = expression.present? ? count_diamonds(expression) : 0
 
     render json: { message: "Quantidade de diamantes extraídos: #{diamonds_count}" }
   end
