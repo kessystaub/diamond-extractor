@@ -1,6 +1,6 @@
 # API de Extração de diamantes
 
-Esta API consiste em processar uma expressão com diamantes (`<>`) e areias (`.`). O objetivo é extrair todos os diamantes da expressão e contar quantos foram extraídos.
+Esta API consiste em processar uma expressão com diamantes (`<>`) e areias (`.`). O objetivo é extrair todos os diamantes e areias da expressão e contar quantos diamantes foram extraídos.
 
 ## Instalação e Execução
 
