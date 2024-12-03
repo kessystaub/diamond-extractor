@@ -8,19 +8,16 @@ class ExtractorController < ApplicationController
 
   private
 
-  def count_diamonds(expression)
-    diamond_count = 0
-    open_diamonds = []
-
-    expression.chars.each do |character|
-      if character == "<"
-        open_diamonds.push(character)
-      elsif character == ">" && open_diamonds.last == "<"
-        open_diamonds.pop
-        diamond_count += 1
-      end
+  def count_diamonds(expression, diamond_count = 0)
+    new_expression = expression.gsub(/<>/) do
+      diamond_count += 1
+      ""
     end
 
-    diamond_count
+    new_expression.gsub!(/\./, "")
+
+    return diamond_count if new_expression == expression
+
+    count_diamonds(new_expression, diamond_count)
   end
 end
